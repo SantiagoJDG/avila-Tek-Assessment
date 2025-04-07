@@ -68,7 +68,7 @@ ORM (Object Relational Mapping) para Node.js que facilita la interacción con la
 	•	index.js, config.js, db/, middleware/, utils/strategies for auth/.
 	2.	Capa de Presentación (Interfaz de Usuario):
 	•	routes/index.js (se expone la API).
-	3. Capa de Contollers.
+	3.      Capa de Contollers.
   	•	routes.module Ejecute el intermedio entre los routes y el Service.
 	4.	Capa de Aplicación (Lógica de Negocio):
 	•	services/ (donde se implementa la lógica de negocio).
