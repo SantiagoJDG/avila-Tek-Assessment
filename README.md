@@ -18,9 +18,9 @@ Asegúrate de tener instalados los siguientes programas en tu máquina:
 
     pnpm install
 
-## Variables de Entorno
+### Variables de Entorno
 
-### Mala práctica. Para propósitos de esta prueba de pasan
+Mala práctica. Para propósitos de esta prueba se pasan
 
 ```
 .env
