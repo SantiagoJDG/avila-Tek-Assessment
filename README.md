@@ -72,29 +72,33 @@ https://documenter.getpostman.com/view/14015417/2sB2cUCPGq#45020aed-eba7-47b6-ab
 
 
 ORM (Object Relational Mapping) para Node.js que facilita la interacción con la base de datos relacional, abstrae sentencias SQL y mejora la escalabilidad de la misma.
+**Hacemos de nuestro código agnóstico de cualquier base de datos** 
 
 
 ### 2. Estructura de Relaciones de Tablas
-
-
-	•	Relación 1:N
-	•	Relación 1:N 
-	•	Tabla pivote (OrderDetails): N:M 
-
+```
+•	Relación 1:N Users - Orders
+•	Relación 1:N Orders - OrderDetails
+•	Tabla pivote (OrderDetails): OrderDetails N:M Products
+```
 
 ### 3. Clean Architecture 
 
+El modelo arquitectonico elegido fue **Clean Architecture**
+
+Garantizamos escalalabilidad separando responsabilidades e independencia por cada capa.
+
 ```
-	1.	Capa de Infraestructura:
-	•	index.js, config.js, db/, middleware/, utils/strategies for auth/.
-	2.	Capa de Presentación (Interfaz de Usuario):
-	•	routes/index.js (se expone la API).
-	3.      Capa de Contollers.
-  	•	routes.module Ejecute el intermedio entre los routes y el Service.
-	4.	Capa de Aplicación (Lógica de Negocio):
-	•	services/ (donde se implementa la lógica de negocio).
-	5.	Capa de Dominio (Modelo de Negocio):
-	•	(Modelos de Sequelize), que interactúan con los servicios de la capa de aplicación.
+1.Capa de Infraestructura:
+	•index.js, config.js, db/, middleware/, utils/strategies for auth/.
+2.Capa de Presentación (Interfaz de Usuario):
+	•routes/index.js (se expone la API).
+3.Capa de Contollers.
+	•routes.module Ejecute el intermedio entre los routes y el Service.
+4.Capa de Aplicación (Lógica de Negocio):
+	•services/ (donde se implementa la lógica de negocio).
+5.Capa de Dominio (Modelo de Negocio):
+	•(Modelos de Sequelize), que interactúan con los servicios de la capa de aplicación.
 ```
 ### 3. Librerías 
 
