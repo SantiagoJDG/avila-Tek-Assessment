@@ -18,6 +18,22 @@ Asegúrate de tener instalados los siguientes programas en tu máquina:
 
     pnpm install
 
+## Variables de Entorno
+
+### Mala práctica. Para propósitos de esta prueba de pasan
+
+```
+.env
+PORT=3000
+DB_USER='santiago'
+DB_PASSWORD='Abcd1234'
+DB_HOST='localhost'
+DB_NAME='avila_tek_store'
+DB_PORT='5432'
+JWT_SECRET=767A11749392C35B9315F8C727A73
+
+```
+
 ## Docker
 
 El proyecto está configurado para ser ejecutado dentro de un contenedor Docker.
@@ -54,15 +70,20 @@ https://documenter.getpostman.com/view/14015417/2sB2cUCPGq#45020aed-eba7-47b6-ab
 
 ### 1. Uso de Sequelize y Base de Datos Relacional
 
+
 ORM (Object Relational Mapping) para Node.js que facilita la interacción con la base de datos relacional, abstrae sentencias SQL y mejora la escalabilidad de la misma.
 
+
 ### 2. Estructura de Relaciones de Tablas
+
 
 	•	Relación 1:N
 	•	Relación 1:N 
 	•	Tabla pivote (OrderDetails): N:M 
 
+
 ### 3. Clean Architecture 
+
 ```
 	1.	Capa de Infraestructura:
 	•	index.js, config.js, db/, middleware/, utils/strategies for auth/.
@@ -76,6 +97,7 @@ ORM (Object Relational Mapping) para Node.js que facilita la interacción con la
 	•	(Modelos de Sequelize), que interactúan con los servicios de la capa de aplicación.
 ```
 ### 3. Librerías 
+
 ```
   • "@hapi/boom" -> Manejo de errores HTTP
   • "bcrypt" -> Hash de contraseñas
